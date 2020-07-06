@@ -62,8 +62,10 @@ function RenderDish({ dish }) {
 
 const DishDetail = (props) => {
     return (
-        <div className="row">
-            <RenderDish dish={props.dish} />
+        <div className="container">
+            <div className="row">
+                <RenderDish dish={props.dish} />
+            </div>
         </div>
     );
 }
