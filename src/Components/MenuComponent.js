@@ -1,9 +1,9 @@
 import React from 'react';
-import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
+import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
 
 function RenderItems({ dish, onClick }) {
     return (
-        <Card key={dish.id} onClick={() => onClick(dish.id)}>
+        <Card key={dish.id}>
             <CardImg width="100%" src={dish.image} alt={dish.name} />
             <CardImgOverlay>
                 <CardTitle>{dish.name}</CardTitle>
