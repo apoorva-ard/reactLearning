@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Media } from 'reactstrap';
 import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
 
 class DishDetail extends Component {
@@ -13,6 +12,7 @@ class DishDetail extends Component {
         const newdate = d.toLocaleDateString("en-US", option)
         return newdate;
     }
+    //another way for formatting date : {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}
 
     renderComments(comments) {
         if (comments == null) {
@@ -66,7 +66,7 @@ class DishDetail extends Component {
     render() {
         return (
             <div className="row">
-                {this.renderDish(this.props.selectedDish)}
+                {this.renderDish(this.props.dish)}
             </div>
         );
     }
