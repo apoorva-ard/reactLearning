@@ -13,24 +13,20 @@ class Header extends Component {
             isNavOpen: false,
             isModalOpen: false
         };
-
         this.toggleNav = this.toggleNav.bind(this);
         this.toggleModal = this.toggleModal.bind(this);
         this.handleLogin = this.handleLogin.bind(this);
     }
-
     toggleNav() {
         this.setState({
             isNavOpen: !this.state.isNavOpen
         });
     }
-
     toggleModal() {
         this.setState({
             isModalOpen: !this.state.isModalOpen
         });
     }
-
     handleLogin(event) {
         this.toggleModal();
         alert("Username: " + this.username.value + " Password: " + this.password.value

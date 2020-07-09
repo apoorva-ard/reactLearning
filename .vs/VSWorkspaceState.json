@@ -1,11 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\public\\assets",
-    "\\public\\assets\\images",
     "\\src",
-    "\\src\\Components"
+    "\\src\\Components",
+    "\\src\\redux"
   ],
-  "SelectedNode": "\\src\\Components\\HeaderComponent.js",
+  "SelectedNode": "\\src\\Components\\DishDetailComponent.js",
   "PreviewInSolutionExplorer": false
 }

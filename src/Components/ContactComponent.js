@@ -119,7 +119,7 @@ class Contact extends Component {
                                         model=".telnum"
                                         show="touched"
                                         messages={{
-                                            required: 'Required',
+                                            required: '*Required',
                                             minLength: 'Must be greater than 2 numbers',
                                             maxLength: 'Must be 15 numbers or less',
                                             isNumber: 'Must be a number'
