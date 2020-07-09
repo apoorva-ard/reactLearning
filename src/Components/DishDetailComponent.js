@@ -78,8 +78,7 @@ class CommentForm extends Component {
         });
     }
     handleSubmit(values) {
-        console.log('Current State is: ' + JSON.stringify(values));
-        alert('Current State is: ' + JSON.stringify(values));
+        this.props.addComment(this.props.dishId, values.rating, values.author, values.comment);
     }
 
     render() {
@@ -105,14 +104,14 @@ class CommentForm extends Component {
                             <Row className="form-group">
                                 <Label htmlFor="yourname" sm={12}>Your Name</Label>
                                 <Col>
-                                    <Control.text model=".name" id="yourname" name="yourname"
+                                    <Control.text model=".author" id="yourname" name="yourname"
                                         placeholder="Your Name"
                                         className="form-control"
                                         validators={{
                                             minLength: minLength(3), maxLength: maxLength(15)
                                         }}
                                     />
-                                    <Errors className="text-danger" model=".name" show="touched"
+                                    <Errors className="text-danger" model=".author" show="touched"
                                         messages={{
                                             minLength: 'Must be greater than 2 characters',
                                             maxLength: 'Must be 15 characters or less'
@@ -138,22 +137,24 @@ class CommentForm extends Component {
 }
 
 
-const DishDetail = ({ dish, comments }) => {
+const DishDetail = (props) => {
     return (
         <div className="container">
             <div className="row">
                 <Breadcrumb>
                     <BreadcrumbItem><Link to="/menu">Menu</Link></BreadcrumbItem>
-                    <BreadcrumbItem active>{dish.name}</BreadcrumbItem>
+                    <BreadcrumbItem active>{props.dish.name}</BreadcrumbItem>
                 </Breadcrumb>
             </div>
             <div className="row">
                 <div className="col-12 col-md-5 m-1">
-                    <RenderDish dish={dish} />
+                    <RenderDish dish={props.dish} />
                 </div>
                 <div className="col-12 col-md-5 m-1">
-                    <RenderComments comments={comments} />
-                    <CommentForm/>
+                    <RenderComments comments={props.comments} />
+                    <CommentForm comments={props.comments}
+                        addComment={props.addComment}
+                        dishId={props.dish.id}/>
                 </div>
             </div>
         </div>
