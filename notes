@@ -1,0 +1,50 @@
+The state of our app is all the data in our application that we have to keep track of for it to work.
+
+All these little pieces of data that we manage in our app as our user interacts with it form our app state.
+
+state - change with the data over time.
+
+single source of truth. Meaning if we want to figure out what the 
+status of our app is at any moment, we look to where we store our state.
+
+
+principle of Redux (as outlined by its creator) prescribes that the state is immutable and cannot change in place.
+
+The store in Redux is kind of magic and holds all of the application's state.
+
+store is the result of calling createStore, a function from the Redux library. 
+
+state in Redux comes from reducers. reducers produce the state of your application.
+
+A Redux reducer is just a JavaScript function. 
+It takes two parameters: the current state and action 
+
+A pure function is a function which:
+Given the same input, will always return the same output.
+Produces no side effects.
+
+Pure functions are functions that accept an input and returns a value without modifying 
+any data outside its scope(Side Effects). Its output or return value must depend on the 
+input/arguments and pure functions must return a value.
+
+Reducers produce the state of an application. But how does a reducer know when to generate the next state?
+The second principle of Redux says the only way to change the state is by sending a signal to the store. 
+This signal is an action. So "dispatching an action" means sending out a signal to the store.
+
+action : it's a JavaScript object with two properties: type and payload.
+The type property drives how the state should change and it's always required by Redux. 
+The payload property instead describes what should change, and might be omitted
+
+When an action is dispatched, the store forwards a message (the action object) to the reducer.
+
+Provider, an high order component from react-redux.	
+wraps up your React application and makes it aware of the entire Redux's store.
+
+react-redux -> connect method - connects a React component with the Redux store.
+two or three arguments
+
+mapStateToProps -> it connects a part of the Redux state to the props of a React component. 
+
+mapDispatchToProps -> connects Redux actions to React props so that connected React component 
+will be able to send messages to the store.
+

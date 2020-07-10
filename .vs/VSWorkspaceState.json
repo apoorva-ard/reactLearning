@@ -5,6 +5,6 @@
     "\\src\\Components",
     "\\src\\redux"
   ],
-  "SelectedNode": "\\src\\Components\\DishDetailComponent.js",
+  "SelectedNode": "\\src\\redux\\ActionCreators.js",
   "PreviewInSolutionExplorer": false
 }
