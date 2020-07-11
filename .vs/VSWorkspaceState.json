@@ -3,8 +3,9 @@
     "",
     "\\src",
     "\\src\\Components",
-    "\\src\\redux"
+    "\\src\\redux",
+    "\\src\\shared"
   ],
-  "SelectedNode": "\\src\\redux\\configureStore.js",
+  "SelectedNode": "\\src\\Components\\MainComponent.js",
   "PreviewInSolutionExplorer": false
 }
