@@ -157,8 +157,8 @@ export const fetchPromos = () => (dispatch) => {
             }
         },
             error => {
-                var error = new Error(error.message);
-                throw error;
+                var errmsg = new Error(error.message);
+                throw errmsg;
             })
         .then(response => response.json())
         .then(promos => dispatch(addPromos(promos)))
@@ -194,8 +194,8 @@ export const fetchLeaders = () => (dispatch) => {
             }
         },
             error => {
-                var error = new Error(error.message);
-                throw error;
+                var errmsg = new Error(error.message);
+                throw errmsg;
             })
         .then(response => response.json())
         .then(leaders => dispatch(addLeaders(leaders)))
