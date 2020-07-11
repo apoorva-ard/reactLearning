@@ -5,6 +5,6 @@
     "\\src\\Components",
     "\\src\\redux"
   ],
-  "SelectedNode": "\\src\\redux\\ActionCreators.js",
+  "SelectedNode": "\\src\\redux\\configureStore.js",
   "PreviewInSolutionExplorer": false
 }
